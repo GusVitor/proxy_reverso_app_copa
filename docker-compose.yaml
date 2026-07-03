@@ -1,0 +1,11 @@
+Version: "3.8"
+
+
+proxy:
+  image: nginx
+  volumes:
+   - ./home/dck01/app_copa/proxy_conf/nginx.conf/:/etc/nginx/nginx.conf:ro
+   - ./home/dck01/app_copa/geral_page/index.html/:/
+  ports:
+   - "80:80"
+  
