@@ -1,11 +1,11 @@
 Version: "3.8"
 
-
-proxy:
-  image: nginx
-  volumes:
-   - ./home/app_copa/proxy_conf/nginx.conf/:/etc/nginx/nginx.conf:ro
-   - ./home/app_copa/geral_page/index.html/:/usr/share/nginx/index.html
-  ports:
-   - "80:80"
+services:
+  proxy:
+    image: nginx
+    volumes:
+    - ./home/app_copa/proxy_conf/nginx.conf/:/etc/nginx/nginx.conf:ro
+    - ./home/app_copa/geral_page/index.html/:/usr/share/nginx/index.html
+    ports:
+    - "80:80"
   
