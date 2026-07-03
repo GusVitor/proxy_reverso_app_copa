@@ -5,7 +5,7 @@ proxy:
   image: nginx
   volumes:
    - ./home/dck01/app_copa/proxy_conf/nginx.conf/:/etc/nginx/nginx.conf:ro
-   - ./home/dck01/app_copa/geral_page/index.html/:/
+   - ./home/dck01/app_copa/geral_page/index.html/:/usr/share/nginx/index.html
   ports:
    - "80:80"
   
