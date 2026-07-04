@@ -5,7 +5,7 @@ services:
     container_name: web_proxy
     image: nginx
     volumes:
-      - /home/dck01/proxy_reverso_app_copa/proxy_conf/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - /home/dck01/proxy_reverso_app_copa/proxy_conf/default.conf:/etc/nginx/conf.d/default.conf
       - /home/dck01/proxy_reverso_app_copa/geral_page:/usr/share/nginx/html:ro
     ports:
       - "8090:80"
