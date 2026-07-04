@@ -39,7 +39,7 @@ http {
             return 444;
         }
 
-        root /var/www/home;
+        root /usr/share/nginx/html;
         index index.html;
 
         location / {
