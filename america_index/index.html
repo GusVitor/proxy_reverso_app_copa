@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Américas na Copa do Mundo 2026</title>
+    <style>
+        /* Paleta de Cores unindo o continente americano */
+        :root {
+            --america-blue: #0A3663;
+            --america-green: #1E5E3A;
+            --america-gold: #D4A373;
+            --light-bg: #F8F9FA;
+            --text-dark: #212529;
+        }
+
+        /* Estilos Globais */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        /* Barra do Tradutor */
+        #translate-bar {
+            background-color: #111;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            font-size: 14px;
+            border-bottom: 3px solid var(--america-gold);
+        }
+        #translate-bar span {
+            margin-right: 12px;
+            font-weight: 500;
+        }
+
+        /* Cabeçalho com degradê vibrante */
+        header {
+            background: linear-gradient(135deg, var(--america-blue) 20%, var(--america-green) 60%, var(--america-gold) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 1.3em;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Cards Informativos */
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Bordas personalizadas nos cards */
+        .card:nth-child(1) { border-top: 6px solid var(--america-blue); }
+        .card:nth-child(2) { border-top: 6px solid var(--america-green); }
+        .card:nth-child(3) { border-top: 6px solid var(--america-gold); }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #111;
+        }
+        .card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Tabela de Informações */
+        .table-container {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow-x: auto;
+        }
+        .table-container h2 {
+            margin-top: 0;
+            color: var(--america-blue);
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #efefef;
+        }
+        th {
+            background-color: #f1f3f5;
+            color: var(--america-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Badges coloridas para as sub-regiões */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .badge-norte { background-color: var(--america-blue); }
+        .badge-central { background-color: var(--america-green); }
+        .badge-sul { background-color: var(--america-gold); color: #111; }
+
+        /* Rodapé Multicolorido */
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+            position: relative;
+        }
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--america-blue), var(--america-green), var(--america-gold));
+        }
+        footer p { margin: 5px 0; }
+
+        /* Ajustes de Layout do Google Widget */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        .goog-te-gadget-simple {
+            background-color: #222 !important;
+            border: 1px solid #444 !important;
+            padding: 4px 8px !important;
+            border-radius: 4px !important;
+        }
+        .goog-te-gadget-simple .goog-te-menu-value span { color: #fff !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Barra Superior com o Seletor de Idiomas -->
+    <div id="translate-bar">
+        <span>🌐 Traduzir página / Translate page:</span>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <!-- Cabeçalho da Página -->
+    <header>
+        <h1>As Américas na Copa do Mundo 2026™</h1>
+        <p>A força, a raça e a paixão dos países americanos no maior palco do futebol mundial</p>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="grid-info">
+            <!-- Card 1: Os Anfitriões -->
+            <div class="card">
+                <h2>Os Anfitriões</h2>
+                <p>Por jogarem em casa, <strong>Estados Unidos, México e Canadá</strong> garantiram suas vagas na Copa de forma automática. Eles representam a força da CONCACAF e estão prontos para receber o mundo.</p>
+            </div>
+            <!-- Card 2: Expansão de Vagas -->
+            <div class="card">
+                <h2>Mais Países Americanos</h2>
+                <p>Com o novo formato de 48 seleções, o continente ganhou ainda mais espaço. A América do Sul (CONMEBOL) passou a ter <strong>6 vagas diretas</strong> mais 1 na repescagem, aumentando o nível de competitividade do torneio.</p>
+            </div>
+            <!-- Card 3: O Legado Americano -->
+            <div class="card">
+                <h2>Histórico de Peso</h2>
+                <p>As seleções da América entram em campo carregando o peso de múltiplos títulos mundiais. O futebol sul-americano e norte-americano promete fazer desta edição uma verdadeira festa em solo caseiro.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Divisão das Seleções Classificadas -->
+        <section class="table-container">
+            <h2>Nações Americanas Classificadas para o Torneio</h2>
+            <p>Confira a divisão das seleções das Américas que conquistaram o direito de disputar a taça em 2026:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Confederação / Região</th>
+                        <th>Status de Classificação</th>
+                        <th>Seleções Confirmadas na Disputa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge badge-norte">América do Norte</span></td>
+                        <td>Classificados Automáticos (Países-Sede)</td>
+                        <td><strong>Canadá, Estados Unidos e México</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-sul">América do Sul (CONMEBOL)</span></td>
+                        <td>Vagas Diretas das Eliminatórias</td>
+                        <td>As potências tradicionais lideradas por <strong>Brasil, Argentina, Uruguai, Colômbia, Equador</strong>, entre outras que garantiram as disputadas vagas da região.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-central">América Central & Caribe</span></td>
+                        <td>Classificados via Eliminatórias CONCACAF</td>
+                        <td>As seleções qualificadas que superaram as fases eliminatórias para se juntarem aos três gigantes do norte.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Rodapé Customizado -->
+    <footer>
+        <p><strong>Copa do Mundo FIFA 2026™</strong> - Orgulho Americano</p>
+        <p>Use o seletor no topo da página para traduzir todo o conteúdo informático instantaneamente.</p>
+    </footer>
+
+    <!-- Script Oficial do Google Tradutor -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,es,fr,de,it,ja,zh-CN,ar,ru', // Idiomas essenciais para as torcidas internacionais
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

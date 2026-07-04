@@ -10,3 +10,9 @@ services:
     ports:
       - "8090:80"
   
+  us_app:
+      container_name: am_cup
+      image: nginx
+      volumes:
+          - /home/dck01/proxy_reverso_app_copa/america_index:/usr/share/nginx/html:ro
+
