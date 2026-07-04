@@ -6,7 +6,7 @@ services:
     image: nginx
     volumes:
       - /home/dck01/proxy_reverso_app_copa/proxy_conf:/etc/nginx/conf.d:ro
-      - /home/dck01/proxy_reverso_app_copa/geral_page:/usr/share/nginx/html/index.html
+      - /home/dck01/proxy_reverso_app_copa/geral_page:/usr/share/nginx/html:ro
     ports:
       - "80:80"
   
