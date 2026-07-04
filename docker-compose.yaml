@@ -10,9 +10,26 @@ services:
     ports:
       - "8090:80"
   
-  us_app:
+  am_app:
       container_name: am_cup
       image: nginx
       volumes:
           - /home/dck01/proxy_reverso_app_copa/america_index:/usr/share/nginx/html:ro
 
+af_app:
+      container_name: af_cup
+      image: nginx
+      volumes:
+          - /home/dck01/proxy_reverso_app_copa/africa_index:/usr/share/nginx/html:ro
+
+eu_app:
+      container_name: eu_cup
+      image: nginx
+      volumes:
+          - /home/dck01/proxy_reverso_app_copa/europa_index:/usr/share/nginx/html:ro
+
+as_app:
+      container_name: as_cup
+      image: nginx
+      volumes:
+          - /home/dck01/proxy_reverso_app_copa/asia_index:/usr/share/nginx/html:ro

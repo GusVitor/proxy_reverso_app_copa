@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Europa na Copa do Mundo 2026</title>
+    <style>
+        /* Paleta de Cores Baseada na Identidade do Futebol Europeu */
+        :root {
+            --europe-blue: #0A2240;
+            --europe-royal: #0052CC;
+            --europe-gold: #F2A900;
+            --light-bg: #F4F6F9;
+            --text-dark: #1A1A1A;
+        }
+
+        /* Estilos Globais */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        /* Barra do Tradutor */
+        #translate-bar {
+            background-color: #111;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            font-size: 14px;
+            border-bottom: 3px solid var(--europe-gold);
+        }
+        #translate-bar span {
+            margin-right: 12px;
+            font-weight: 500;
+        }
+
+        /* Cabeçalho com o Tema Europeu em um degradê elegante */
+        header {
+            background: linear-gradient(135deg, var(--europe-blue) 0%, var(--europe-royal) 60%, var(--europe-gold) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 1.3em;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Cards Informativos */
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Bordas personalizadas nos cards */
+        .card:nth-child(1) { border-top: 6px solid var(--europe-blue); }
+        .card:nth-child(2) { border-top: 6px solid var(--europe-royal); }
+        .card:nth-child(3) { border-top: 6px solid var(--europe-gold); }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #111;
+        }
+        .card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Tabela de Informações */
+        .table-container {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow-x: auto;
+        }
+        .table-container h2 {
+            margin-top: 0;
+            color: var(--europe-blue);
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #efefef;
+        }
+        th {
+            background-color: #f1f3f5;
+            color: var(--europe-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Badges coloridas para os potes/status das seleções */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .badge-elite { background-color: var(--europe-blue); }
+        .badge-competitiva { background-color: var(--europe-royal); }
+        .badge-playoff { background-color: var(--europe-gold); color: #111; }
+
+        /* Rodapé Elegante */
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+            position: relative;
+        }
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--europe-blue), var(--europe-royal), var(--europe-gold));
+        }
+        footer p { margin: 5px 0; }
+
+        /* Ajustes de Layout do Google Widget */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        .goog-te-gadget-simple {
+            background-color: #222 !important;
+            border: 1px solid #444 !important;
+            padding: 4px 8px !important;
+            border-radius: 4px !important;
+        }
+        .goog-te-gadget-simple .goog-te-menu-value span { color: #fff !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Barra Superior com o Seletor de Idiomas -->
+    <div id="translate-bar">
+        <span>🌐 Traduzir página / Translate page:</span>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <!-- Cabeçalho da Página -->
+    <header>
+        <h1>A Europa na Copa do Mundo 2026™</h1>
+        <p>A elite do futebol europeu rumo à conquista da América do Norte</p>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="grid-info">
+            <!-- Card 1: Expansão de Vagas -->
+            <div class="card">
+                <h2>Mais Vagas Continentais</h2>
+                <p>Com o novo formato de 48 seleções adotado pela FIFA, a UEFA (Europa) garantiu um aumento histórico de vagas, passando a enviar <strong>16 seleções nacionais</strong> diretamente para a fase final da Copa do Mundo.</p>
+            </div>
+            <!-- Card 2: Eliminatórias Intensas -->
+            <div class="card">
+                <h2>O Caminho da Classificação</h2>
+                <p>As Eliminatórias Europeias foram divididas em grupos competitivos onde apenas os líderes garantiram carimbo direto. As vagas restantes foram decididas em confrontos eliminatórios de tirar o fôlego nos playoffs.</p>
+            </div>
+            <!-- Card 3: Hegemonia em Jogo -->
+            <div class="card">
+                <h2>Em Busca da Glória</h2>
+                <p>As seleções europeias cruzam o oceano com o objetivo claro de manter o alto nível técnico e tático que as caracteriza, buscando reconquistar o topo absoluto do futebol mundial em solo americano.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Divisão das Seleções Europeias -->
+        <section class="table-container">
+            <h2>As Forças da UEFA Confirmadas no Mundial</h2>
+            <p>Conheça a divisão das principais forças do futebol europeu que garantiram o passaporte para o torneio de 2026:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grupo de Destaque</th>
+                        <th>Perfil de Qualificação</th>
+                        <th>Principais Potências Confirmadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge badge-elite">Gigantes Históricos</span></td>
+                        <td>Campeões mundiais e líderes absolutos de grupos das eliminatórias.</td>
+                        <td><strong>França, Alemanha, Inglaterra, Espanha, Itália</strong>, carregando o favoritismo e o peso de suas camisas estreladas.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-competitiva">Grandes Forças</span></td>
+                        <td>Seleções de altíssimo nível tático que dominaram seus respectivos grupos.</td>
+                        <td><strong>Portugal, Holanda, Bélgica, Croácia</strong>, prontas para desafiar qualquer adversário e buscar o título inédito ou o retorno ao pódio.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-playoff">Qualificados nos Playoffs</span></td>
+                        <td>Vencedores das disputadas repescagens europeias.</td>
+                        <td>As seleções que superaram os dramáticos mata-matas da UEFA para carimbar as últimas e preciosas vagas para a América do Norte.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Rodapé Customizado -->
+    <footer>
+        <p><strong>Copa do Mundo FIFA 2026™</strong> - Continente Europeu (UEFA)</p>
+        <p>Use o seletor no topo para ler estas informações no idioma de sua preferência.</p>
+    </footer>
+
+    <!-- Script Oficial do Google Tradutor -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,es,fr,de,it,ja,zh-CN,ar,ru', // Inclui os principais idiomas das grandes torcidas europeias
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

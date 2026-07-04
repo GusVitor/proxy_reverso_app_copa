@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A África na Copa do Mundo 2026</title>
+    <style>
+        /* Paleta de Cores Baseada na Identidade do Futebol Africano */
+        :root {
+            --africa-green: #008751;
+            --africa-gold: #FFC72C;
+            --africa-red: #D2143A;
+            --light-bg: #F9FAFB;
+            --text-dark: #1F2937;
+        }
+
+        /* Estilos Globais */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        /* Barra do Tradutor */
+        #translate-bar {
+            background-color: #111;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            font-size: 14px;
+            border-bottom: 3px solid var(--africa-gold);
+        }
+        #translate-bar span {
+            margin-right: 12px;
+            font-weight: 500;
+        }
+
+        /* Cabeçalho com o Tema Africano em um degradê cheio de energia */
+        header {
+            background: linear-gradient(135deg, var(--africa-green) 0%, var(--africa-red) 60%, var(--africa-gold) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 1.3em;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Cards Informativos */
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Bordas personalizadas nos cards */
+        .card:nth-child(1) { border-top: 6px solid var(--africa-green); }
+        .card:nth-child(2) { border-top: 6px solid var(--africa-gold); }
+        .card:nth-child(3) { border-top: 6px solid var(--africa-red); }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #111;
+        }
+        .card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Tabela de Informações */
+        .table-container {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow-x: auto;
+        }
+        .table-container h2 {
+            margin-top: 0;
+            color: var(--africa-green);
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #efefef;
+        }
+        th {
+            background-color: #f1f3f5;
+            color: #111;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Badges coloridas para os status das seleções */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .badge-giants { background-color: var(--africa-green); }
+        .badge-stars { background-color: var(--africa-gold); color: #111; }
+        .badge-playoff { background-color: var(--africa-red); }
+
+        /* Rodapé Elegante */
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+            position: relative;
+        }
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--africa-green), var(--africa-gold), var(--africa-red));
+        }
+        footer p { margin: 5px 0; }
+
+        /* Ajustes de Layout do Google Widget */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        .goog-te-gadget-simple {
+            background-color: #222 !important;
+            border: 1px solid #444 !important;
+            padding: 4px 8px !important;
+            border-radius: 4px !important;
+        }
+        .goog-te-gadget-simple .goog-te-menu-value span { color: #fff !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Barra Superior com o Seletor de Idiomas -->
+    <div id="translate-bar">
+        <span>🌐 Traduzir página / Translate page:</span>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <!-- Cabeçalho da Página -->
+    <header>
+        <h1>A África na Copa do Mundo 2026™</h1>
+        <p>O brilho, o ritmo e a força do futebol africano prontos para conquistar o mundo</p>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="grid-info">
+            <!-- Card 1: Expansão Histórica -->
+            <div class="card">
+                <h2>Recorde de Vagas</h2>
+                <p>Com a mudança para 48 seleções, a Confederação Africana de Futebol (CAF) garantiu uma expansão fantástica. O continente passou a contar com <strong>9 vagas diretas</strong> e mais 1 chance na repescagem mundial.</p>
+            </div>
+            <!-- Card 2: Formato das Eliminatórias -->
+            <div class="card">
+                <h2>O Caminho para a América</h2>
+                <p>As equipes foram divididas em 9 grupos intensos. Apenas os primeiros colocados de cada grupo carimbaram o passaporte definitivo, garantindo que o torneio conte apenas com os times mais consistentes do continente.</p>
+            </div>
+            <!-- Card 3: Histórico Poderoso -->
+            <p></p>
+            <div class="card">
+                <h2>Crescimento Global</h2>
+                <p>Após a campanha histórica de Marrocos em 2022 (primeiro semifinalista africano), o futebol da África chega a 2026 respeitado mundialmente, exibindo força física, talento nato e muita ousadia tática.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Divisão das Seleções Africanas -->
+        <section class="table-container">
+            <h2>Os Representantes da CAF Confirmados no Mundial</h2>
+            <p>Confira a estrutura dos times africanos que conquistaram o direito de desfilar seu futebol nos gramados da América do Norte:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoria de Destaque</th>
+                        <th>Estilo de Jogo</th>
+                        <th>Grandes Seleções na Disputa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge badge-giants">Potências Tradicionais</span></td>
+                        <td>Seleções com grande histórico de confrontos e atletas brilhando nos maiores clubes do mundo.</td>
+                        <td>Gigantes como <strong>Marrocos, Senegal, Nigéria, Camarões, Egito, Argélia</strong>, que chegam liderando as frentes de favoritismo técnico.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-stars">Forças Competitivas</span></td>
+                        <td>Times repletos de jovens promessas e esquemas táticos focados em velocidade e contra-ataques rápidos.</td>
+                        <td>Seleções de peso como <strong>Gana, Costa do Marfim, Tunísia, Mali</strong>, sempre prontas para derrubar potências de outros continentes.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-playoff">Playoff Continental</span></td>
+                        <td>O melhor segundo colocado que disputou o mata-mata final.</td>
+                        <td>A seleção resiliente que venceu os torneios eliminatórios internos para lutar pela última vaga na repescagem da FIFA.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Rodapé Customizado -->
+    <footer>
+        <p><strong>Copa do Mundo FIFA 2026™</strong> - Confederação Africana (CAF)</p>
+        <p>Use o seletor no topo para ler estas informações no idioma de sua preferência.</p>
+    </footer>
+
+    <!-- Script Oficial do Google Tradutor -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,es,fr,de,ar,pt,sw,yo', // Inclui francês, árabe, suaíli e iorubá, muito presentes na cultura africana
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

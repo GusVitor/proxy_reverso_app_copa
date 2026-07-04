@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Ásia na Copa do Mundo 2026</title>
+    <style>
+        /* Paleta de Cores Baseada na Identidade do Futebol Asiático */
+        :root {
+            --asia-red: #C8102E;
+            --asia-gold: #D4AF37;
+            --asia-dark: #1F2421;
+            --light-bg: #F8F9FA;
+            --text-dark: #212529;
+        }
+
+        /* Estilos Globais */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        /* Barra do Tradutor */
+        #translate-bar {
+            background-color: #111;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            font-size: 14px;
+            border-bottom: 3px solid var(--asia-gold);
+        }
+        #translate-bar span {
+            margin-right: 12px;
+            font-weight: 500;
+        }
+
+        /* Cabeçalho com o Tema Asiático em um degradê marcante */
+        header {
+            background: linear-gradient(135deg, var(--asia-dark) 0%, var(--asia-red) 60%, var(--asia-gold) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 1.3em;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Cards Informativos */
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Bordas personalizadas nos cards */
+        .card:nth-child(1) { border-top: 6px solid var(--asia-dark); }
+        .card:nth-child(2) { border-top: 6px solid var(--asia-red); }
+        .card:nth-child(3) { border-top: 6px solid var(--asia-gold); }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #111;
+        }
+        .card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Tabela de Informações */
+        .table-container {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow-x: auto;
+        }
+        .table-container h2 {
+            margin-top: 0;
+            color: var(--asia-red);
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #efefef;
+        }
+        th {
+            background-color: #f1f3f5;
+            color: var(--asia-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Badges coloridas para os status das seleções */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .badge-leaders { background-color: var(--asia-dark); }
+        .badge-giants { background-color: var(--asia-red); }
+        .badge-playoff { background-color: var(--asia-gold); color: #111; }
+
+        /* Rodapé Elegante */
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+            position: relative;
+        }
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--asia-dark), var(--asia-red), var(--asia-gold));
+        }
+        footer p { margin: 5px 0; }
+
+        /* Ajustes de Layout do Google Widget */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        .goog-te-gadget-simple {
+            background-color: #222 !important;
+            border: 1px solid #444 !important;
+            padding: 4px 8px !important;
+            border-radius: 4px !important;
+        }
+        .goog-te-gadget-simple .goog-te-menu-value span { color: #fff !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Barra Superior com o Seletor de Idiomas -->
+    <div id="translate-bar">
+        <span>🌐 Traduzir página / Translate page:</span>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <!-- Cabeçalho da Página -->
+    <header>
+        <h1>A Ásia na Copa do Mundo 2026™</h1>
+        <p>O continente asiático em busca de fazer história nos gramados da América do Norte</p>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="grid-info">
+            <!-- Card 1: Expansão Histórica -->
+            <div class="card">
+                <h2>Crescimento na Copa</h2>
+                <p>A Ásia foi um dos continentes mais beneficiados pelo novo formato de 48 equipes. A Confederação Asiática de Futebol (AFC) saltou para um total de <strong>8 vagas diretas</strong>, além de mais 1 vaga disputada na repescagem intercontinental.</p>
+            </div>
+            <!-- Card 2: Eliminatórias Longas -->
+            <div class="card">
+                <h2>Caminho Árduo</h2>
+                <p>A Terceira Fase das Eliminatórias dividiu as seleções em três grupos super competitivos de seis equipes. Apenas as melhores cruzaram o continente para carimbar o passaporte rumo ao Mundial.</p>
+            </div>
+            <!-- Card 3: Evolução Técnica -->
+            <div class="card">
+                <h2>Potencial Asiático</h2>
+                <p>Com um futebol extremamente veloz, disciplinado e de evolução constante, as equipes asiáticas chegam à Copa de 2026 focadas em quebrar recordes e surpreender as potências tradicionais do esporte.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Divisão das Seleções Asiáticas -->
+        <section class="table-container">
+            <h2>As Forças da AFC Confirmadas no Mundial</h2>
+            <p>Confira a distribuição dos representantes do futebol asiático que garantiram a classificação para o torneio:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bloco de Classificação</th>
+                        <th>Perfil Tático</th>
+                        <th>Principais Seleções Confirmadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge badge-giants">Potências Tradicionais</span></td>
+                        <td>Seleções de elite que constantemente representam o continente no cenário mundial.</td>
+                        <td><strong>Japão, Coreia do Sul, Irã, Austrália</strong> e <strong>Arábia Saudita</strong>, chegando com elencos experientes e forte apoio de suas torcidas.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-leaders">Forças em Ascensão</span></td>
+                        <td>Equipes que demonstraram um crescimento técnico absurdo ao longo do ciclo atual.</td>
+                        <td>Seleções altamente competitivas que carimbaram o acesso direto por mérito e consistência nas fases finais dos grupos.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-playoff">Vagas de Repescagem</span></td>
+                        <td>Vencedores da Quarta Fase e da disputa intercontinental.</td>
+                        <td>As equipes que superaram a pressão dos mata-matas asiáticos para agarrar a última chance de disputar a taça.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Rodapé Customizado -->
+    <footer>
+        <p><strong>Copa do Mundo FIFA 2026™</strong> - Confederação Asiática (AFC)</p>
+        <p>Use o seletor no topo para ler estas informações no idioma de sua preferência.</p>
+    </footer>
+
+    <!-- Script Oficial do Google Tradutor -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,es,fr,de,ja,ko,zh-CN,ar,ru', // Inclui japonês, coreano, chinês e árabe, fundamentais para a Ásia
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
