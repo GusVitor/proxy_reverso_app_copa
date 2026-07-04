@@ -24,18 +24,56 @@
             color: var(--text-dark);
         }
 
-        /* Barra do Tradutor */
+        /* Barra do Tradutor e Menu de Continentes */
         #translate-bar {
             background-color: #111;
             padding: 12px 20px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between; /* Alinha o menu à esquerda e o tradutor à direita */
             align-items: center;
+            flex-wrap: wrap; /* Garante que quebre linha em telas pequenas */
+            gap: 15px;
             color: #fff;
             font-size: 14px;
             border-bottom: 3px solid var(--usa-red);
         }
-        #translate-bar span {
+
+        /* Menu de Navegação dos Continentes */
+        .continent-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .continent-menu span {
+            font-weight: bold;
+            color: var(--usa-red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .btn-continent {
+            background-color: #222;
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 13px;
+            border: 1px solid #444;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+        }
+        .btn-continent:hover {
+            background-color: var(--usa-blue);
+            border-color: var(--usa-red);
+            color: #fff;
+        }
+
+        /* Lado direito (Tradutor) */
+        .translate-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .translate-wrapper span {
             margin-right: 12px;
             font-weight: 500;
         }
@@ -184,10 +222,22 @@
 </head>
 <body>
 
-    <!-- Barra Superior com o Seletor de Idiomas -->
+    <!-- Barra Superior unificada (Menu + Tradutor) -->
     <div id="translate-bar">
-        <span>🌐 Traduzir página / Translate page:</span>
-        <div id="google_translate_element"></div>
+        <!-- Botões de Continentes adicionados aqui -->
+        <nav class="continent-menu">
+            <span>Continentes:</span>
+            <a href="http://eu.172.29.0.112.nip.io:8090/#" class="btn-continent">Europa</a>
+            <a href="http://as.172.29.0.112.nip.io:8090/#" class="btn-continent">Ásia</a>
+            <a href="http://am.172.29.0.112.nip.io:8090/#" class="btn-continent">América</a>
+            <a href="http://af.172.29.0.112.nip.io:8090/#" class="btn-continent">África</a>
+        </nav>
+
+        <!-- Seletor de Idiomas -->
+        <div class="translate-wrapper">
+            <span>🌐 Traduzir página / Translate page:</span>
+            <div id="google_translate_element"></div>
+        </div>
     </div>
 
     <!-- Cabeçalho da Página com Degradê dos Países -->
