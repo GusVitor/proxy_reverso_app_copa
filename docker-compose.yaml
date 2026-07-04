@@ -8,5 +8,5 @@ services:
       - /home/dck01/proxy_reverso_app_copa/proxy_conf:/etc/nginx/conf.d:ro
       - /home/dck01/proxy_reverso_app_copa/geral_page:/usr/share/nginx/html:ro
     ports:
-      - "80:80"
+      - "8090:80"
   
